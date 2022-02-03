@@ -2,6 +2,8 @@ clear;clc;
 
 addpath ../kernel
 addpath ../kernel/libraries
+addpath ../kernel/dynamics
+addpath ../kernel/sensors
 
 buses = Simulink.data.dictionary.open('bus_definition.sldd');
 
