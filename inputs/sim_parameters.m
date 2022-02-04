@@ -18,4 +18,6 @@ config.imu3_alignment = [0; 0; 0];
 
 save('config.mat','config','-v7.3');
 
+% sensors.
+
 % set_param(gcs,'EnableLBRepository','on');
