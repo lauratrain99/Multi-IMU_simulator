@@ -3,8 +3,8 @@ clear;clc;
 tsim = 100;
 fs = 200; 
 t = 0:(1/fs):tsim;
-% w = 10*pi / 4;
-w = 0;
+w = 2*pi / 4;
+% w = 0;
 
 motion = "constantZ";
  
