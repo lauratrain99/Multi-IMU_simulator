@@ -1,11 +1,12 @@
 clear;clc;
 
-tsim = 10;
+tsim = 100;
 fs = 200; 
 t = 0:(1/fs):tsim;
-w = 2*pi * 2 / 10;
+w = 2*pi / 4;
+% w = 0;
 
-motion = "constantY";
+motion = "constantZ";
  
 if motion == "constantZ"
     simulation.omega_V = timeseries([zeros(length(t), 1), zeros(length(t), 1), w*ones(length(t),1)],t);

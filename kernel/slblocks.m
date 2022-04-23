@@ -3,10 +3,10 @@ function blkStruct = slblocks
 % should appear in the Library Browser with the 
 % name 'My Library'
 
-    Browser.Library = 'quat_multiply';
+    Browser.Library = 'attitude_library';
     % 'mylib' is the name of the library
 
-    Browser.Name = 'My quat multiplication';
+    Browser.Name = 'Attitude library';
     % 'My Library' is the library name that appears
     % in the Library Browser
 
