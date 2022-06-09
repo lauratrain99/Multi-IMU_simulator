@@ -12,7 +12,7 @@ tsim = 10;
 config.CoM_alignment = [0, 0, 0];
 config.Larm = 0.065;
 config.geometry = 1;
-config.euler0 = deg2rad([0,0,0]);
+config.euler0 = deg2rad([20,0,0]);
 
 save('config.mat','config','-v7.3');
 freq = 200;
