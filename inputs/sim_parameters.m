@@ -8,11 +8,11 @@ addpath ../kernel/navigation
 
 buses = Simulink.data.dictionary.open('bus_definition.sldd');
 
-tsim = 10;
+tsim = 25;
 config.CoM_alignment = [0, 0, 0];
 config.Larm = 0.065;
 config.geometry = 1;
-config.euler0 = deg2rad([20,0,0]);
+config.euler0 = deg2rad([0,-27.0675,0]);
 
 save('config.mat','config','-v7.3');
 freq = 200;
@@ -38,7 +38,7 @@ imu1.mag.quantization = 2*imu1.mag.fullrange/2^14;
 imu1.mag.noisepower = ([50, 50, 50]*1e-3).^2; %(microT)^2/Hz
 imu1.mag.std = sqrt(imu1.mag.noisepower*freq);
 
-imu2.gyro.bias = (([8.74, 7.88, 4.43]*1e-5)*180/pi); %(deg/s)^2
+imu2.gyro.bias = (([8.74, 7.88, 4.43]*1e-5)*180/pi); %(deg/s)
 imu2.gyro.std = [0.0019, 0.0018, 0.002]; %rad/s
 imu2.gyro.noisepower = (imu2.gyro.std*180/pi).^2/freq;
 % sqrt(imu2.gyro.noisepower*freq)*pi/180; %rad/s
