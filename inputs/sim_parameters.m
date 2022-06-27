@@ -11,7 +11,7 @@ buses = Simulink.data.dictionary.open('bus_definition.sldd');
 tsim = 25;
 config.CoM_alignment = [0, 0, 0];
 config.Larm = 0.065;
-config.geometry = 1;
+config.geometry = 0;
 config.euler0 = deg2rad([0,-27.0675,0]);
 
 save('config.mat','config','-v7.3');
@@ -20,7 +20,7 @@ Ts = 1/freq;
 
 % Sensor specifications
 imu1.gyro.bias = ([6.1, 9.22, 2.89]*1e-5)*180/pi; %deg/s
-imu1.gyro.std = [0.0019, 0.0018, 0.0017]; %rad/s
+imu1.gyro.std = [0.0019, 0.0018, 0.0017]*10; %rad/s
 imu1.gyro.noisepower = (imu1.gyro.std*180/pi).^2/freq;
 % sqrt(imu1.gyro.noisepower*freq)*pi/180; %rad/s
 % imu1.gyro.noisepower = [0.01, 0.01, 0.01].^2; %(deg/s)^2/Hz
